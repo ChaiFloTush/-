@@ -1,0 +1,254 @@
+/* BASE */
+body {
+    background-color: #EAE0D5
+}
+
+.nav {
+    background-color: #301E1E;
+}
+
+.nav span {
+    color: white;
+    font-size: 24px;
+}
+
+.nav a {
+    color: white;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #EAE0D5;
+    font-size: 16px;
+}
+
+.nav .btn-default {
+    background-color: #C6AC8F !important;
+    color: #301E1E !important;
+}
+
+.nav .btn-default:hover {
+    background-color: #9d856b;
+    color: #301E1E;
+}
+
+.nav img {
+    width: 55px;
+    height: 55px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.title {
+    color: #3b2525;
+    font-size: 28px;
+}
+
+.mainbody .redtext p {
+    color: #900d0d;
+}
+
+.mainbody p {
+    font-size: 20px;
+    color: #5E503F;
+}
+
+.mainbody span {
+    font-size: 20px;
+    color: #5E503F;
+}
+
+.mainbody a {
+    font-size: 20px;
+    color: #C6AC8F;
+}
+
+.mainbody a:hover {
+    font-size: 20px;
+    color: #ad977d;
+}
+
+/* INDEX */
+
+h1 {
+    padding-left: 50px;
+}
+
+.bottompart {
+    padding-left: 0px !important;
+}
+
+.questionblock {
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    border: 2px solid #3b2525;
+    padding: 10px 10px 10px 10px;
+    background-color: #faf2ed;
+}
+
+.questionblock img {
+    width: 125px;
+    height: 125px;
+    margin-left: 10px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 2px solid #3b2525;
+}
+
+.btn:hover {
+    color: #C6AC8F !important;
+}
+
+.btn-default {
+    background-color: #3b2525 !important;
+    color: #C6AC8F !important;
+    font-size: 20px;
+}
+
+.btn-default:hover {
+    background-color: #533636 !important;
+    color: #C6AC8F;
+}
+
+.bottom {
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-top: 5px !important;
+    padding: 10px 0px 10px 0px !important;
+}
+
+/* QUESTION */
+
+.bottompart2 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.bottompart2 textarea {
+    border: 2px solid #3b2525;
+    border-radius: 4px;
+    height: 200px;
+    width: 100%;
+    background-color: #faf2ed;
+    font-size: 20px;
+    resize: none;
+    margin: 5px 0px;
+}
+
+.commentblock {
+    border: 2px solid #3b2525;
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding: 10px 10px 10px 10px;
+    background-color: #faf2ed;
+}
+
+.commentblock img {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 2px solid #3b2525;
+}
+
+.questionblockmain {
+    margin-right: 50px!important;
+    margin-left: 50px!important;
+    margin-top: 15px!important;
+    padding: 10px 10px 10px 10px;
+}
+
+.questionblockmain img {
+    width: 125px;
+    height: 125px;
+    margin-left: 10px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 2px solid #3b2525;
+}
+
+.questionblockmain h1 {
+    padding-left: 0px;
+}
+
+.comments {
+    border-top: 2px solid #3b2525;
+    margin: 0px 50px;
+    padding: 5px 0px;
+}
+
+.comments2 {
+    border-bottom: 2px solid #3b2525;
+    margin: 0px 50px;
+    padding: 5px 0px;
+}
+
+/* ASK */
+
+.bottom {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
+    padding: 10px 0px 10px 0px;
+}
+
+textarea {
+    border: 2px solid #3b2525;
+    border-radius: 4px;
+    height: 300px;
+    width: 100%;
+    background-color: #faf2ed;
+    font-size: 20px;
+    resize: none !important;
+}
+
+.create {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
+    padding: 10px 10px 0px 0px;
+}
+
+input {
+    border: 2px solid #3b2525;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #faf2ed;
+    font-size: 20px;
+}
+
+/* SETTINGS */
+
+.bottomlog {
+    margin-right: 50px!important;
+    margin-left: 50px!important;
+    margin-top: 0px!important;
+    padding: 0px 0px 0px 0px;
+}
+
+.createlog {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
+    padding: 10px 10px 0px 0px;
+}
+
+.createlog .redtext p {
+    color: #900d0d;
+}
+
+.bottomlink {
+    padding-top: 5px;
+}
+
+.createlog img {
+    width: 125px;
+    height: 125px;
+    border: 2px solid #3b2525;
+    margin-bottom: 10px;
+}
