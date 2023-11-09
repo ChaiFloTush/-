@@ -8,3 +8,15 @@ def index(request):
 
 def question(request):
     return render(request, 'question.html')
+
+def ask(request):
+    return render(request, 'ask.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def settings(request):
+    return render(request, 'settings.html')
+
+def signup(request):
+    return render(request, 'signup.html')
