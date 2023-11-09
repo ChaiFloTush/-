@@ -1,0 +1,23 @@
+{% load static %}
+
+<div class="row questionblock">
+    <div class="col-3">
+        <div class="row"><img src= "{% static '/img/crying_cat.jpg' %}"></div>
+        <div class="row align-items-center">
+            <div class="col-auto"><span>{{ question.grade }}</span></div>
+            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
+            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col"><a href="">{{ question.title }}</a></div>
+        <div class="w-100"></div>
+        <div class="col"><p>{{ question.content }}</p></div>
+        <div class="row">
+            <div class="col-auto"><a href="">{{ question.answers }}</a></div>
+            <div class="col-auto"><span>Tags: </span></div>
+            <div class="col-auto"><a href="">{{ question.first_tag }}</a></div>
+            <div class="col-auto"><a href="">{{ question.second_tag }}</a></div>
+        </div>
+    </div>
+</div>

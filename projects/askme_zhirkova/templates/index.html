@@ -1,90 +1,30 @@
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% load static %}
 
 {% block content %}
 
-<!--NEW-->
+
 <div class="row mt-3 align-items-center mainbody">
     <div class="col-auto">
         <h1 class="title">New questions</h1>
     </div>
     <div class="col-auto"><a href="">Hot questions</a></div>
 </div>
-<!--NEW-->
 
-<!--NEW-->
-<div class="row questionblock">
-    <div class="col-3">
-        <div class="row"><img src= "{% static '/img/crying_cat.jpg' %}"></div>
-        <div class="row align-items-center">
-            <div class="col-auto"><span>25</span></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="col"><a href="">First question</a></div>
-        <div class="w-100"></div>
-        <div class="col"><p>Lorem ipsum dolor sit amet, cofdsjhfjks sdhfjksghfjks shdjfkhsjk shdfjkhsjkf sdfhjkdgsj sdhfjkshjk sdjfgsjk</p></div>
-        <div class="row">
-            <div class="col-auto"><a href="">Answers(0)</a></div>
-            <div class="col-auto"><span>Tags: </span></div>
-            <div class="col-auto"><a href="">dsgahdja</a></div>
-            <div class="col-auto"><a href="">wth</a></div>
-        </div>
-    </div>
-</div>
 
-<div class="row questionblock">
-    <div class="col-3">
-        <div class="row"><img src="../static/img/crying_cat.jpg"></div>
-        <div class="row align-items-center">
-            <div class="col-auto"><span>25</span></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="col"><a href="">First question</a></div>
-        <div class="w-100"></div>
-        <div class="col"><p>Lorem ipsum dolor sit amet, cofdsjhfjks sdhfjksghfjks shdjfkhsjk shdfjkhsjkf sdfhjkdgsj sdhfjkshjk sdjfgsjk</p></div>
-        <div class="row">
-            <div class="col-auto"><a href="">Answers(0)</a></div>
-            <div class="col-auto"><span>Tags: </span></div>
-            <div class="col-auto"><a href="">dsgahdja</a></div>
-            <div class="col-auto"><a href="">wth</a></div>
-        </div>
-    </div>
-</div>
+{% for question in questions %}
 
-<div class="row questionblock">
-    <div class="col-3">
-        <div class="row"><img src="../static/img/crying_cat.jpg"></div>
-        <div class="row align-items-center">
-            <div class="col-auto"><span>25</span></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="col"><a href="">First question</a></div>
-        <div class="w-100"></div>
-        <div class="col"><p>Lorem ipsum dolor sit amet, cofdsjhfjks sdhfjksghfjks shdjfkhsjk shdfjkhsjkf sdfhjkdgsj sdhfjkshjk sdjfgsjk</p></div>
-        <div class="row">
-            <div class="col-auto"><a href="">Answers(0)</a></div>
-            <div class="col-auto"><span>Tags: </span></div>
-            <div class="col-auto"><a href="">dsgahdja</a></div>
-            <div class="col-auto"><a href="">wth</a></div>
-        </div>
-    </div>
-</div>
+{% include 'components/question-item.html' %}
+
+{% endfor %}
+
+
 <div class="row bottom ">
-    <div class="col-auto bottompart"><button type="button" class="btn btn-default">1</button></div>
-    <div class="col-auto "><button type="button" class="btn btn-default">2</button></div>
-    <div class="col-auto "><button type="button" class="btn btn-default">3</button></div>
-    <div class="col-auto "><button type="button" class="btn btn-default">...</button></div>
-    <div class="col-auto "><button type="button" class="btn btn-default">53</button></div>
+    <div class="col-auto bottompart"><button type="button" class="btn btn-default"><</button></div>
+    <div class="col-auto "><button type="button" class="btn btn-default">1</button></div>
+    <div class="col-auto "><button type="button" class="btn btn-default">></button></div>
 </div>
-<!--NEW-->
+
+
 {% endblock %}
