@@ -2,9 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-# Create your views here.
-def index(request):
-    questions = [
+QUESTIONS = [
         {
             'id': i,
             'title': f'Question {i}',
@@ -15,10 +13,14 @@ def index(request):
             'second_tag': f'second tag {i}'
         } for i in range(10)
     ]
-    return render(request, 'index.html', {'questions': questions})
 
-def question(request):
-    return render(request, 'question.html')
+# Create your views here.
+def index(request):
+    return render(request, 'index.html', {'questions': QUESTIONS})
+
+def question(request, question_id):
+    item = QUESTIONS[question_id]
+    return render(request, 'question.html', {'question': item})
 
 def ask(request):
     return render(request, 'ask.html')
