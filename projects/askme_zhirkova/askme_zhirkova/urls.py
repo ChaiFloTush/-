@@ -21,6 +21,8 @@ from app import views
 
 urlpatterns = [
     path('', views.index, name = 'index'),
+    path('tag/<str:popular_tag>', views.tag, name = 'tag'),
+    path('hot/', views.hot, name ='hot'),
     path('ask/', views.ask, name ='ask'),
     path('login/', views.login, name = 'login'),
     path('question/<int:question_id>', views.question, name = 'question'),

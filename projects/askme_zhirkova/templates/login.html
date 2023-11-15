@@ -19,9 +19,9 @@
 </div>
 
 <div class = "row bottomlog">
-    <div class="col-auto bottompart"><button type="button" class="btn btn-default">Log in</button></div>
+    <div class="col-auto bottompart"><a href="{% url 'index' %}"><button type="button" class="btn btn-default">Log in</button></a></div>
     <div class="w-100"></div>
-    <div class="col bottompart bottomlink"><a href="">Create new account</a></div>
+    <div class="col bottompart bottomlink"><a href="{% url 'signup' %}">Create new account</a></div>
 </div>
 
 {% endblock %}

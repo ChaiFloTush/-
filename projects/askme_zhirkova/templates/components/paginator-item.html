@@ -1,0 +1,13 @@
+{% if page.has_previous %}
+<div class="col-auto bottompart"><a href="{% url root %}?page={{page.previous_page_number}}"><button type="button" class="btn btn-default"><</button></a></div>
+{% else %}
+<div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default"><</button></a></div>
+{% endif %}
+
+<div class="col-auto bottompart"><button type="button" class="btn btn-default">{{ page.number }}</button></div>
+    
+{% if page.has_next  %}
+<div class="col-auto bottompart"><a href="{% url root%}?page={{page.next_page_number}}"><button type="button" class="btn btn-default">></button></a></div>
+ {% else %}
+<div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default">></button></a></div>
+{% endif %}

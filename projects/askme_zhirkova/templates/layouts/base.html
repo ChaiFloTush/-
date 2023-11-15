@@ -23,7 +23,7 @@
         <div class="row nav align-items-center pt-1 pb-1">
             <div class="col-3 text-center navmain"><a href="{% url 'index' %}">AskZhirkova</a></div>
             <div class="col-5"><input class="form-control" type="text" placeholder="Search"></div>
-            <div class="col-1 text-center "><button type="button" class="btn btn-default">Ask</button></div>
+            <div class="col-1 text-center "><a href="{% url 'ask' %}"><button type="button" class="btn btn-default">Ask</button> </a></div>
             <div class="col-1 text-center"><img src="{% static '/img/bingus.jpg' %}"></div>
             <div class="col-2 text-center">
                 <span>Bingus</span>
@@ -44,11 +44,9 @@
                     <h2 class="title">Popular tags:</h2>
                 </div>
                 <div class="row">
-                    <div class="col redtext"><a href="">adadsadadasd</a></div>
-                    <div class="col"><a href="">adadsadadasd</a></div>
-                    <div class="col"><a href="">adadsadadasd</a></div>
-                    <div class="col redtext"><a href="">adadsadadasd</a></div>
-                    <div class="col"><a href="">adadsadadasd</a></div>
+                    {% for tag in tags %}
+                    <div class="col redtext"><a href="{% url 'tag' tag.name %}"> {{tag.name}} </a></div>
+                    {% endfor %}
                 </div>
                 <div class="row">
                     <h2 class="title">Best members:</h2>

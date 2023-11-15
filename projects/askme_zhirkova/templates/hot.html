@@ -7,9 +7,8 @@
 
 <div class="row mt-3 align-items-center mainbody">
     <div class="col-auto">
-        <h1 class="title"> New questions</h1>
+        <h1 class="title"> Hot questions</h1>
     </div>
-    <div class="col-auto"><a href="{% url 'hot' %}">Hot questions</a></div>
 </div>
 
 
@@ -22,13 +21,13 @@
 
 <div class="row bottom ">
     {% if page.has_previous %}
-    <div class="col-auto bottompart"><a href="{% url 'index'%}?page={{page.previous_page_number}}"><button type="button" class="btn btn-default"><</button></a></div>
+    <div class="col-auto bottompart"><a href="{% url 'hot'%}?page={{page.previous_page_number}}"><button type="button" class="btn btn-default"><</button></a></div>
     {% else %}
     <div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default"><</button></a></div>
     {% endif %}
     <div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default">{{ page.number }}</button></a></div>
     {% if page.has_next  %}
-    <div class="col-auto bottompart"><a href="{% url 'index'%}?page={{page.next_page_number}}"><button type="button" class="btn btn-default">></button></a></div>
+    <div class="col-auto bottompart"><a href="{% url 'hot'%}?page={{page.next_page_number}}"><button type="button" class="btn btn-default">></button></a></div>
     {% else %}
     <div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default">></button></a></div>
     {% endif %}

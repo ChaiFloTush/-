@@ -5,28 +5,7 @@
 {% block content %}
 
 {% include 'components/question-item.html' %}
-<!--
-<div class="row questionblockmain">
-    <div class="col-3">
-        <div class="row"><img src="{% static '/img/crying_cat.jpg' %}"></div>
-        <div class="row align-items-center">
-            <div class="col-auto"><span>{{ question.grade }}</span></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-        </div>
-    </div>
-    <div class="col ">
-        <div class="col"><h1>{{ question.title }}</h1></div>
-        <div class="w-100"></div>
-        <div class="col"><p>{{ question.content }}</p></div>
-        <div class="row">
-            <div class="col-auto"><span>Tags: </span></div>
-            <div class="col-auto"><a href="">{{ question.first_tag }}</a></div>
-            <div class="col-auto"><a href="">{{ question.second_tag }}</a></div>
-        </div>
-    </div>
-</div>
--->
+
 <div class ="comments"></div>
 
 {% for answer in answers %}
@@ -34,47 +13,21 @@
 {% include 'components/answer-item.html' %}
 
 {% endfor %}
-<!--
-    <div class="row commentblock">
-        <div class="col-3">
-            <div class="row"><img src="{% static '/img/crying_cat.jpg' %}"></div>
-            <div class="row align-items-center">
-                <div class="col-auto"><span>25</span></div>
-                <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-                <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-            </div>
-        </div>
-        <div class="col ">
-            <div class="col"><p>Lorem ipsum dolor sit amet, cofdsjhfjks sdhfjksghfjks shdjfkhsjk shdfjkhsjkf sdfhjkdgsj sdhfjkshjk sdjfgsjk</p></div>
-            <div class="row align-items-center">
-                <div class="col-auto"><input type="checkbox"></div>
-                <div class="col-auto"><span>Correct</span></div>
-            </div>
-        </div>
-    </div>
 
-    <div class="row commentblock">
-        <div class="col-3">
-            <div class="row"><img src="{% static '/img/crying_cat.jpg' %}"></div>
-            <div class="row align-items-center">
-                <div class="col-auto"><span>25</span></div>
-                <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
-                <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
-            </div>
-        </div>
-        <div class="col ">
-            <div class="col"><p>Lorem ipsum dolor sit amet, cofdsjhfjks sdhfjksghfjks shdjfkhsjk shdfjkhsjkf sdfhjkdgsj sdhfjkshjk sdjfgsjk</p></div>
-            <div class="row">
-                <div class="col-auto"><input type="checkbox" checked></div>
-                <div class="col-auto"><span>Correct</span></div>
-            </div>
-        </div>
-    </div>
--->
     <div class="row bottom ">
-        <div class="col-auto bottompart"><button type="button" class="btn btn-default"><</button></div>
-        <div class="col-auto "><button type="button" class="btn btn-default">{{ page }}</button></div>
-        <div class="col-auto "><button type="button" class="btn btn-default">></button></div>
+        {% if page.has_previous %}
+        <div class="col-auto bottompart"><a href="{% url 'question' question.id%}?page={{page.previous_page_number}}"><button type="button" class="btn btn-default"><</button></a></div>
+        {% else %}
+        <div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default"><</button></a></div>
+        {% endif %}
+
+        <div class="col-auto bottompart"><button type="button" class="btn btn-default">{{ page.number }}</button></div>
+        
+        {% if page.has_next  %}
+        <div class="col-auto bottompart"><a href="{% url 'question' question.id%}?page={{page.next_page_number}}"><button type="button" class="btn btn-default">></button></a></div>
+        {% else %}
+        <div class="col-auto bottompart"><a href=""><button type="button" class="btn btn-default">></button></a></div>
+        {% endif %}
     </div>
 
     <div class ="comments2"></div>
