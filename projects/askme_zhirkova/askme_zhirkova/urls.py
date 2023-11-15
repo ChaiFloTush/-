@@ -20,10 +20,10 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='index'),
     path('ask/', views.ask),
     path('login/', views.login),
-    path('question/<int:question_id>', views.question),
+    path('question/<int:question_id>', views.question, name='question'),
     path('settings/', views.settings),
     path('signup/', views.signup),
     path('admin/', admin.site.urls),
