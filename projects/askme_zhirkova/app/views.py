@@ -38,6 +38,8 @@ def question(request, question_id):
     page = request.GET.get('page', 1)
     return render(request, 'question.html', {'question': item, 'answers':paginate(ANSWERS, page), 'page': page})
 
+
+
 def ask(request):
     return render(request, 'ask.html')
 
