@@ -28,19 +28,19 @@
             <div class="col-2 text-center">
                 <span>Bingus</span>
                 <div class="row align-items-center">
-                    <div class="col text-center"><a href="">Settings</a></div>
-                    <div class="col text-center"><a href="">Log out</a></div>
+                    <div class="col text-center"><a href="{% url 'settings' %}">Settings</a></div>
+                    <div class="col text-center"><a href="{% url 'login' %}">Log out</a></div>
                 </div>
             </div>
         </div>
 
-        <div class="row mainbody">
+        <div class="row mainbody mb-3 mt-3 pt-5">
             <div class="col-9">
                 {% block content %}
                 {% endblock %}
             </div>
             <div class="col-3">
-                <div class="row mt-5"> 
+                <div class="row mt-3"> 
                     <h2 class="title">Popular tags:</h2>
                 </div>
                 <div class="row">
@@ -67,7 +67,7 @@
         </div>
 
 
-        <div class="row nav">
+        <div class="row footer">
             <p></p>
         </div>
     </div>

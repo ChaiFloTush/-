@@ -7,9 +7,9 @@
 
 <div class="row mt-3 align-items-center mainbody">
     <div class="col-auto">
-        <h1 class="title">New questions</h1>
+        <h1 class="title"> New questions</h1>
     </div>
-    <div class="col-auto"><a href="">Hot questions</a></div>
+    <div class="col-auto"><a href="{% url 'index' %}">Hot questions</a></div>
 </div>
 
 
@@ -22,7 +22,7 @@
 
 <div class="row bottom ">
     <div class="col-auto bottompart"><button type="button" class="btn btn-default"><</button></div>
-    <div class="col-auto "><button type="button" class="btn btn-default">1</button></div>
+    <div class="col-auto "><button type="button" class="btn btn-default">{{ page }}</button></div>
     <div class="col-auto "><button type="button" class="btn btn-default">></button></div>
 </div>
 

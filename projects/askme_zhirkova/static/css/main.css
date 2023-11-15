@@ -1,10 +1,20 @@
 /* BASE */
 body {
-    background-color: #EAE0D5
+    background-color: #EAE0D5;
 }
 
 .nav {
     background-color: #301E1E;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.footer {
+    background-color: #301E1E;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .nav span {

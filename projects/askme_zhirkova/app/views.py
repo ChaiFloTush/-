@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from django.core.paginator import Paginator
+
 QUESTIONS = [
         {
             'id': i,
@@ -13,10 +15,14 @@ QUESTIONS = [
             'second_tag': f'second tag {i}'
         } for i in range(10)
     ]
+def paginate(objects, page, per_page=5):
+    paginator = Paginator(objects, per_page)
+    return paginator.page(page)
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html', {'questions': QUESTIONS})
+    page = request.GET.get('page', 1)
+    return render(request, 'index.html', {'questions': paginate(QUESTIONS, page), 'page': page})
 
 def question(request, question_id):
     item = QUESTIONS[question_id]
