@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="row commentblock">
+    <div class="col-3">
+        <div class="row"><img src="{% static '/img/crying_cat.jpg' %}"></div>
+        <div class="row align-items-center">
+            <div class="col-auto"><span>{{ answer.grade }}</span></div>
+            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-up fa-lg"></i></button></div>
+            <div class="col-auto"><button class="btn"><i class="fa-solid fa-thumbs-down fa-lg"></i></button></div>
+        </div>
+    </div>
+    <div class="col ">
+        <div class="col"><p>{{ answer.content }}</p></div>
+        <div class="row align-items-center">
+            <div class="col-auto"><input type="checkbox"></div>
+            <div class="col-auto"><span>Correct</span></div>
+        </div>
+    </div>
+</div>

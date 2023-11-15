@@ -15,6 +15,15 @@ QUESTIONS = [
             'second_tag': f'second tag {i}'
         } for i in range(10)
     ]
+
+ANSWERS = [
+        {
+            'id': i,
+            'content': f'Long lorem ipsum {i}',
+            'grade': i,
+        } for i in range(10)
+    ]
+
 def paginate(objects, page, per_page=5):
     paginator = Paginator(objects, per_page)
     return paginator.page(page)
@@ -26,7 +35,8 @@ def index(request):
 
 def question(request, question_id):
     item = QUESTIONS[question_id]
-    return render(request, 'question.html', {'question': item})
+    page = request.GET.get('page', 1)
+    return render(request, 'question.html', {'question': item, 'answers':paginate(ANSWERS, page), 'page': page})
 
 def ask(request):
     return render(request, 'ask.html')
